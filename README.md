@@ -12,6 +12,19 @@ The agent must intelligently decide:
 * Response Text
 
 ---
+![WhatsApp Image 2026-04-08 at 9 23 50 PM](https://github.com/user-attachments/assets/dd5cef07-d55e-43a1-9ab3-9700ca4898db)
+
+--------
+![WhatsApp Image 2026-04-08 at 9 22 53 PM](https://github.com/user-attachments/assets/20cdddf7-7ed3-446a-8797-0a65298ebb77)
+------
+![WhatsApp Image 2026-04-07 at 11 47 40 PM](https://github.com/user-attachments/assets/9eb810d4-e3f1-43a5-a4b5-ab6485512d2b)
+------
+![WhatsApp Image 2026-04-07 at 11 47 07 PM](https://github.com/user-attachments/assets/5bae9288-9371-4ecd-ab04-4597ac683f75)
+
+
+
+
+
 
 ## 🚀 What Makes This Project Strong
 
