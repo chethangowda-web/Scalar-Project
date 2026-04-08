@@ -1,0 +1,15 @@
+name: support-ops-openenv
+description: Real-world customer support triage environment with deterministic graders.
+version: 0.1.0
+entrypoint: server.app:app
+tags:
+  - openenv
+  - customer-support
+  - triage
+metadata:
+  author: chethangowda-web
+  difficulty_levels:
+    - easy
+    - medium
+    - hard
+  task_count: 3
