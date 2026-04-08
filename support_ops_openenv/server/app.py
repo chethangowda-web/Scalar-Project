@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 
 from support_ops_openenv.environment import SupportOpsEnvironment
 from support_ops_openenv.models import SupportAction
@@ -20,9 +20,26 @@ async def tasks() -> dict:
 
 
 @app.post("/reset")
-async def reset(payload: dict | None = None) -> dict:
-    payload = payload or {}
-    task_id = payload.get("task_id", "task_easy")
+async def reset(request: Request) -> dict:
+    task_id = "task_easy"
+
+    # Accept task_id from JSON body, form body, query param, or empty body.
+    try:
+        payload = await request.json()
+        if isinstance(payload, dict):
+            task_id = str(payload.get("task_id", task_id))
+    except Exception:
+        try:
+            form_data = await request.form()
+            if "task_id" in form_data:
+                task_id = str(form_data.get("task_id"))
+        except Exception:
+            pass
+
+    query_task_id = request.query_params.get("task_id")
+    if query_task_id:
+        task_id = query_task_id
+
     observation = env.reset(task_id=task_id)
     return {"observation": observation.model_dump(), "state": env.state().model_dump()}
 
